@@ -1,20 +1,3 @@
-Sign up
-TayArmy
-/
-alx-low_level_programming
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-alx-low_level_programming/0x08-recursion/101-wildcmp.c
-@TayArmy
-TayArmy C-recursions
- 1 contributor
-Executable File  26 lines (22 sloc)  503 Bytes
 #include "main.h"
 /**
  * wildcmp - compares two strings and returns 1
