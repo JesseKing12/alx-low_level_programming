@@ -1,65 +1,33 @@
-#include "holberton.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
 
 /**
- * _memcpy - copies memory area.
- * @dest: the memory area to be filled
- * @src: the origin memery area
- * @n: number of bytes to copy
- *
- * Return: a pointer to the memory area dest.
+ * _realloc -  reallocates a memory block using malloc and free
+ * @ptr: pointer
+ * @old_size: old size
+ * @new_size: new size
+ * Return: pointer
  */
-
-char *_memcpy(char *dest, char *src, unsigned int n)
-{
-	char *p = dest;
-
-	for (; n; n--)
-		*p++ = *src++;
-
-	return (dest);
-}
-
-/**
- * _realloc - reallocates a memory block.
- * @ptr: pointer to the memory previously allocated.
- * @old_size: old size of pointer
- * @new_size: new size of pointer
- *
- * Return: void *
- */
-
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *nptr;
+	char *clone, *relloc;
+	unsigned int i;
 
+	if (ptr != NULL)
+	clone = ptr;
+	else
+	{ return (malloc(new_size)); }
 	if (new_size == old_size)
-		return (ptr);
-
-	if ((new_size == 0) && ptr)
+	return (ptr);
+	if (new_size == 0 && ptr != NULL)
+	{ free(ptr);
+	return (0); }
+	relloc = malloc(new_size);
+	if (relloc == NULL)
+	return (0);
+	for (i = 0; i < (old_size || i < new_size); i++)
 	{
-		free(ptr);
-		return (NULL);
+		*(relloc + i) = clone[i];
 	}
-
-	if (!ptr)
-	{
-		free(ptr);
-		nptr = malloc(new_size);
-		if (!nptr)
-			return (NULL);
-		return (nptr);
-	}
-
-	if (new_size > old_size)
-	{
-		nptr = malloc(new_size);
-		if (!nptr)
-			return (NULL);
-
-		_memcpy(nptr, ptr, old_size);
-		free(ptr);
-	}
-	return (nptr);
+	free(ptr);
+return (relloc);
 }
