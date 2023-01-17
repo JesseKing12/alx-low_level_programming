@@ -1,19 +1,3 @@
-collinsuc
-/
-alx-low_level_programming
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-alx-low_level_programming/0x0E-structures_typedef/2-print_dog.c
-@collinsuc
-collinsuc 2-print_dog.c
- 1 contributor
-19 lines (17 sloc)  346 Bytes
 #include <stdio.h>
 #include <stdlib.h>
 #include "dog.h"
