@@ -1,18 +1,19 @@
 #include "main.h"
 /**
- * _memset - function fills the first memory with a constant value
- * @s: buffer to be filled and returned
- * @b: constant value
- * @n: bytes of the memory
+ * _memset - fill a block of memory with a specific value
+ * @s: starting address of memory to be filled
+ * @b: the desired value
+ * @n: number of bytes to be changed
+ *
  * Return: changed array with new value for n bytes
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	int index;
+	int i = 0;
 
-	for (index = 0; n > 0; index++)
+	for (; n > 0; i++)
 	{
-		s[index] = b;
+		s[i] = b;
 		n--;
 	}
 	return (s);

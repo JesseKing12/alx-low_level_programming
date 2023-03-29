@@ -1,23 +1,22 @@
 #include "main.h"
-#include <stddef.h>
 /**
- * _strpbrk - functions thar searches a string for any of a set of bytes
- * @s: the string
- * @accept: set of bytes
- * Return: pointer to the byte in s that matches one of the bytes in accept
+ * _strpbrk - Entry point
+ * @s: input
+ * @accept: input
+ * Return: Always 0 (Success)
  */
 char *_strpbrk(char *s, char *accept)
 {
-	unsigned int a;
-	unsigned int b;
+	int k;
 
-	for (a = 0; s[a] != '\0'; a++)
+	while (*s)
 	{
-		for (b = 0; accept[b] != '\0'; b++)
+		for (k = 0; accept[k]; k++)
 		{
-			if (s[a] == accept[b])
-				return (&s[a]);
+			if (*s == accept[k])
+				return (s);
 		}
+		s++;
 	}
-	return (NULL);
+	return ('\0');
 }

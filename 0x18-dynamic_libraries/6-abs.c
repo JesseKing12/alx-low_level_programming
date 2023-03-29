@@ -1,15 +1,14 @@
 #include "main.h"
+
 /**
- * _abs - main function
- *
- * @n: integer to make absolute
- * Return: int or int times negative
- *
+ * _abs - Computes the absolute value of an integer
+ * @t: The integer to be computed
+ * Return: The absolute value
  */
-int _abs(int n)
+int _abs(int t)
 {
-	if (n > 0)
-		return (n);
+	if (t >= 0)
+		return (t);
 	else
-		return (n * -1);
+		return (-t);
 }
